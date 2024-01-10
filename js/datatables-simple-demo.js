@@ -5,5 +5,10 @@ window.addEventListener('DOMContentLoaded', event => {
     const datatablesSimple = document.getElementById('datatablesSimple');
     if (datatablesSimple) {
         new simpleDatatables.DataTable(datatablesSimple);
+        // Tambahkan event handler untuk submit form
+        table.on('submit', function(e, datatable) {
+            // Submit form secara normal
+            datatable.submit();
+        });
     }
 });
